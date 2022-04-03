@@ -1,0 +1,16 @@
+.product {
+  display: flex;
+  justify-content: space-between;
+}
+
+.content-left {
+  width: 50%;
+}
+
+.content-right {
+  width: 50%;
+}
+
+.content-right img {
+  width: 100%;
+}
