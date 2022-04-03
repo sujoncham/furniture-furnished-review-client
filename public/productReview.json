@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "name": "Prithom Hasan",
+    "para": "If you aren't satisfied with the build tool and configuration choices, you can eject at any time. This command will remove the single build dependency from your project.",
+    "img": "./images/profile-1.jpg",
+    "rating": "4 Star"
+  },
+  {
+    "id": 2,
+    "name": "Prithom Hasan",
+    "para": "If you aren't satisfied with the build tool and configuration choices, you can eject at any time. This command will remove the single build dependency from your project.",
+    "img": "./images/profile-2.jpg",
+    "rating": "4.5 Star"
+  },
+  {
+    "id": 3,
+    "name": "Prithom Hasan",
+    "para": "If you aren't satisfied with the build tool and configuration choices, you can eject at any time. This command will remove the single build dependency from your project.",
+    "img": "./images/profile-3.jpg",
+    "rating": "3.5 Star"
+  },
+  {
+    "id": 4,
+    "name": "Prithom Hasan",
+    "para": "If you aren't satisfied with the build tool and configuration choices, you can eject at any time. This command will remove the single build dependency from your project.",
+    "img": "./images/profile-4.jpg",
+    "rating": "4.5 Star"
+  },
+  {
+    "id": 5,
+    "name": "Prithom Hasan",
+    "para": "If you aren't satisfied with the build tool and configuration choices, you can eject at any time. This command will remove the single build dependency from your project.",
+    "img": "./images/profile-5.jpg",
+    "rating": "3.5 Star"
+  },
+  {
+    "id": 6,
+    "name": "Prithom Hasan",
+    "para": "If you aren't satisfied with the build tool and configuration choices, you can eject at any time. This command will remove the single build dependency from your project.",
+    "img": "./images/profile-6.jpg",
+    "rating": "4 Star"
+  }
+]

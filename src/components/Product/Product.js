@@ -20,7 +20,6 @@ const Product = () => {
             <div className='content-right'>
                 <img src={product.image} alt="" />
             </div>
-
         </div>
     );
 };

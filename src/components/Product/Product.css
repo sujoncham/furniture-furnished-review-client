@@ -14,3 +14,20 @@
 .content-right img {
   width: 100%;
 }
+
+.review {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.review-item img {
+  width: 30%;
+  height: 130px;
+  border-radius: 50%;
+}
+
+.review-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
