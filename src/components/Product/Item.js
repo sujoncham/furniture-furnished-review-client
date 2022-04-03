@@ -2,6 +2,7 @@ import React from 'react';
 
 const Item = ({review}) => {
     const {name, img, para, rating} = review;
+
     return (
         <div className='review-item'>
             <img src={img} alt="" />

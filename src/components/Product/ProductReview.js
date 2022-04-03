@@ -1,22 +1,23 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import useReview from '../../hooks/useReview';
 import Item from './Item';
 
 const ProductReview = () => {
-    const [reviews, setReviews] = useState([]);
-    useEffect( () =>{
-        fetch('productReview.json')
-        .then(res => res.json())
-        .then(data => setReviews(data));
-    }, [])
+    const [reviews, setReviews] = useReview();
+    const reviewData = reviews.slice(0, 3);
+
     return (
         <div>
-            <h1>product Review : {reviews.length}</h1>
+            <h1>product Review :{reviews.length}</h1>
            <div className='review'>
            {
-                reviews.map(review => <Item key={review.id} review={review}></Item>)
+                reviewData.map(review => <Item key={review.id} review={review}></Item>)
             }
-            <button>See all reviews</button>
            </div>
+           <div className='link-btn'>
+            <Link to="/review">See all comments</Link>
+            </div>
         </div>
     );
 };

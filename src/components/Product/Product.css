@@ -20,6 +20,20 @@
   grid-template-columns: repeat(3, 1fr);
 }
 
+.link-btn a {
+  background-color: purple;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  color: #fff;
+}
+
+.link-btn {
+  width: 100%;
+  margin-top: 40px;
+  text-align: center;
+}
+
 .review-item img {
   width: 30%;
   height: 130px;
