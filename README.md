@@ -8,8 +8,9 @@ Netlify Website Link: (https://sage-fairy-027a2c.netlify.app/)
 
 - Product review project
 - Created comment json data
-- 3 comments showing home page
-- Full comments at review page
+- 3 comments showing at home page
+- All comments at review page
 - Dashboard for recharts
 - Blog page for three answers
-- Menu active
+- Menu active with Custom Link
+- Footer added

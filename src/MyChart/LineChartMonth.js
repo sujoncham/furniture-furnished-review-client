@@ -43,7 +43,7 @@ const MyChart = () => {
       ];
 
     return (
-        <LineChart width={550} height={350} data={data}>
+        <LineChart width={550} height={300} data={data}>
             <Line dataKey={'sell'}></Line>
             <XAxis dataKey={'month'}></XAxis>
             <YAxis></YAxis>
