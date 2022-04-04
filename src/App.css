@@ -1,4 +1,234 @@
-.container {
-  width: 1200px;
-  margin: 0 auto;
+@media only screen and (max-width: 600px) {
+  .container {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .header {
+    flex-direction: column;
+  }
+
+  .question {
+    grid-template-columns: 1fr !important;
+  }
+
+  .chart {
+    flex-direction: column;
+  }
+
+  .chart-item {
+    width: 100% !important;
+  }
+
+  .review-item img {
+    width: 22% !important;
+    height: 135px !;
+  }
+
+  .review-item {
+    display: flex !important;
+    flex-direction: column;
+  }
+
+  .review {
+    grid-template-columns: 1fr !important;
+  }
+
+  .product {
+    flex-direction: column;
+  }
+
+  .content-right {
+    width: 100% !important;
+    order: 1;
+  }
+
+  .content-left {
+    width: 100% !important;
+    order: 2;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .container {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .header {
+    flex-direction: column;
+  }
+
+  .question {
+    grid-template-columns: 1fr !important;
+  }
+
+  .chart {
+    flex-direction: column;
+  }
+
+  .review-item img {
+    width: 22% !important;
+    height: 135px !;
+  }
+
+  .chart-item {
+    width: 100% !important;
+  }
+
+  .review {
+    grid-template-columns: 1fr !important;
+  }
+
+  .review-item {
+    display: flex !important;
+    flex-direction: column;
+  }
+
+  .product {
+    flex-direction: column;
+  }
+
+  .content-right {
+    width: 100% !important;
+    order: 1;
+  }
+
+  .content-left {
+    width: 100% !important;
+    order: 2;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .header {
+    flex-direction: column;
+  }
+
+  .question {
+    grid-template-columns: 1fr !important;
+  }
+
+  .chart {
+    flex-direction: row;
+  }
+
+  .chart-item {
+    width: 45% !important;
+  }
+
+  .review {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  .product {
+    flex-direction: column;
+  }
+
+  .content-right {
+    width: 100% !important;
+    order: 1;
+  }
+
+  .content-left {
+    width: 100% !important;
+    order: 2;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .container {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .header {
+    flex-direction: row;
+  }
+
+  .question {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+
+  .chart {
+    flex-direction: row;
+  }
+
+  .chart-item {
+    width: 45% !important;
+  }
+
+  .review {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+
+  .product {
+    flex-direction: row;
+  }
+
+  .content-right {
+    width: 50% !important;
+    order: 2;
+  }
+
+  .content-left {
+    width: 50% !important;
+    order: 1;
+  }
+
+  .review-item img {
+    width: 70% !important;
+    height: 80px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+    margin: 0 auto;
+  }
+
+  .header {
+    flex-direction: row;
+  }
+
+  .question {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+
+  .chart {
+    flex-direction: row;
+  }
+
+  .chart-item {
+    width: 45% !important;
+  }
+
+  .review {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+
+  .product {
+    flex-direction: row;
+  }
+
+  .content-right {
+    width: 50% !important;
+    order: 2;
+  }
+
+  .content-left {
+    width: 50% !important;
+    order: 1;
+  }
+
+  .review-item img {
+    width: 50% !important;
+    height: 100px;
+  }
 }

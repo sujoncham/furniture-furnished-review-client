@@ -1,12 +1,12 @@
 import React from "react";
 import {
-    Bar,
-    BarChart,
-    CartesianGrid,
-    Legend,
-    Tooltip,
-    XAxis,
-    YAxis
+  Bar,
+  BarChart,
+  CartesianGrid,
+  Legend,
+  Tooltip,
+  XAxis,
+  YAxis
 } from "recharts";
 
 const MyChart = () => {
@@ -50,7 +50,7 @@ const MyChart = () => {
   ];
 
   return (
-    <BarChart width={550} height={350} data={data}>
+    <BarChart width={360} height={320} data={data}>
       <CartesianGrid strokeDasharray="3 3" />
       <XAxis dataKey="month" />
       <YAxis />

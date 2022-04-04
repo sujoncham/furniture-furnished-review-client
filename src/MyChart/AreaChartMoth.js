@@ -49,7 +49,7 @@ const MyChart = () => {
 
   return (
     <AreaChart
-      width={540}
+      width={380}
       height={350}
       data={data}
       margin={{ top: 10, right: 30, left: 0, bottom: 0 }}
