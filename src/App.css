@@ -183,13 +183,13 @@
 
   .review-item img {
     width: 70% !important;
-    height: 80px;
+    height: 160px !important;
   }
 }
 
 @media only screen and (min-width: 1200px) {
   .container {
-    width: 1200px;
+    max-width: 1200px;
     margin: 0 auto;
   }
 
@@ -229,6 +229,6 @@
 
   .review-item img {
     width: 50% !important;
-    height: 100px;
+    height: 176px !important;
   }
 }
