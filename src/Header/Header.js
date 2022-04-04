@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import CustomLink from '../components/CustomLink/CustomLink';
 import './Header.css';
 
 const Header = () => {
@@ -8,11 +8,11 @@ const Header = () => {
             <h1>Furniture Furnished</h1>
             <nav className='menu'>
                 <ul>
-                    <li><Link to="/">Home</Link> </li>
-                    <li><Link to="/review">Review</Link> </li>
-                    <li><Link to="/dashboard">Dashboard</Link> </li>
-                    <li><Link to="/blogs">Blogs</Link> </li>
-                    <li><Link to="/about">About</Link> </li>
+                    <li><CustomLink to="/">Home</CustomLink> </li>
+                    <li><CustomLink to="/review">Review</CustomLink> </li>
+                    <li><CustomLink to="/dashboard">Dashboard</CustomLink> </li>
+                    <li><CustomLink to="/blogs">Blogs</CustomLink> </li>
+                    <li><CustomLink to="/about">About</CustomLink> </li>
                 </ul>
             </nav>
         </div>
