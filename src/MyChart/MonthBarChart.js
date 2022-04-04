@@ -1,5 +1,5 @@
 import React from 'react';
-import { Line, LineChart, XAxis, YAxis } from 'recharts';
+import { Bar, BarChart, CartesianGrid, Legend, Tooltip, XAxis, YAxis } from 'recharts';
 
 const MyChart = () => {
 
@@ -8,46 +8,50 @@ const MyChart = () => {
             "month": "Mar",
             "investment": 100000,
             "sell": 241,
-            "revenue": 10401
+            "revenue": 50401
         },
         {
             "month": "Apr",
             "investment": 200000,
             "sell": 423,
-            "revenue": 24500
+            "revenue": 84500
         },
         {
             "month": "May",
             "investment": 500000,
             "sell": 726,
-            "revenue": 67010
+            "revenue": 207010
         },
         {
             "month": "Jun",
             "investment": 500000,
             "sell": 529,
-            "revenue": 40405
+            "revenue": 240405
         },
         {
             "month": "Jul",
             "investment": 600000,
             "sell": 601,
-            "revenue": 50900
+            "revenue": 350900
         },
         {
             "month": "Aug",
             "investment": 700000,
             "sell": 670,
-            "revenue": 61000
+            "revenue": 361000
         },
       ];
 
     return (
-        <LineChart width={550} height={350} data={data}>
-            <Line dataKey={'sell'}></Line>
-            <XAxis dataKey={'month'}></XAxis>
-            <YAxis></YAxis>
-        </LineChart>
+        <BarChart width={600} height={250} data={data}>
+  <CartesianGrid strokeDasharray="3 3" />
+  <XAxis dataKey="month" />
+  <YAxis />
+  <Tooltip />
+  <Legend />
+  <Bar dataKey="investment" fill="#8884d8" />
+  <Bar dataKey="revenue" fill="#82ca9d" />
+</BarChart>
     );
 };
 

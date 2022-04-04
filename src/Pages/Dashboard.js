@@ -1,29 +1,31 @@
-import React from 'react';
-import MonthToInvesment from '../MyChart/MonthToInvesment';
-import MonthToRevenue from '../MyChart/MonthToRevenue';
-import MonthToSell from '../MyChart/MonthToSell';
-import SellToRevenue from '../MyChart/SellToRevenue';
+import React from "react";
+import AreaChartMoth from "../MyChart/AreaChartMoth";
+import LineChartMonth from "../MyChart/LineChartMonth";
+import MonthBarChart from "../MyChart/MonthBarChart";
+import PieChartMonth from "../MyChart/PieChartMonth";
+import "./pages.css";
 
 const Dashboard = () => {
-    return (
-        <div>
-            <h1>Dashboard</h1>
-            <div className='chart'>
-            <div className='chart-item'>
-            <MonthToSell></MonthToSell>
-            </div>
-            <div className='chart-item'>
-                <MonthToRevenue></MonthToRevenue>
-            </div>
-            <div className='chart-item'>
-                <MonthToInvesment></MonthToInvesment>
-            </div>
-            <div className='chart-item'>
-                <SellToRevenue></SellToRevenue>
-            </div>
-            </div>
+  return (
+    <div className="board-container">
+      <h1>Dashboard</h1>
+
+      <div className="chart">
+        <div className="chart-item">
+          <LineChartMonth></LineChartMonth>
         </div>
-    );
+        <div className="chart-item">
+          <PieChartMonth></PieChartMonth>
+        </div>
+        <div className="chart-item">
+          <MonthBarChart></MonthBarChart>
+        </div>
+        <div className="chart-item">
+          <AreaChartMoth></AreaChartMoth>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default Dashboard;

@@ -1,4 +1,9 @@
 .chart {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.chart-item {
+  width: 50%;
 }
