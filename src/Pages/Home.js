@@ -5,7 +5,7 @@ import Product from '../components/Product/Product';
 
 const Home = () => {
     return (
-        <div>
+        <div className='home-page'>
             <Product></Product>
             <HomeReview></HomeReview>
             <div className='link-btn'>

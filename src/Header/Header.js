@@ -4,6 +4,7 @@ import './Header.css';
 
 const Header = () => {
     return (
+        <div className="top-header">
         <div className="container">
             <div className='header'>
             <h1>Furniture Furnished</h1>
@@ -16,6 +17,7 @@ const Header = () => {
                     <li><CustomLink to="/about">About</CustomLink> </li>
                 </ul>
             </nav>
+        </div>
         </div>
         </div>
     );

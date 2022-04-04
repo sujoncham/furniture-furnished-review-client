@@ -1,4 +1,5 @@
 import React from 'react';
+import './Product.css';
 
 const Item = ({review}) => {
     const {name, img, para, rating} = review;
@@ -6,10 +7,10 @@ const Item = ({review}) => {
     return (
         <div className='review-item'>
             <img src={img} alt="" />
-            <div>
-                <p>{name}</p>
+            <div className='item-single'>
+                <h3>{name}</h3>
                 <p>{para}</p>
-                <p>Rating: {rating}</p>
+                <p>Rating: <span className='rate'>{rating}</span></p>
             </div>
         </div>
     );

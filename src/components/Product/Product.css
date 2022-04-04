@@ -1,6 +1,8 @@
 .product {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  margin: 30px;
 }
 
 .content-left {
@@ -18,30 +20,61 @@
 .review {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  margin: 20px 0 20px 0;
 }
 
 .link-btn a {
-  background-color: purple;
+  background-color: #ddbd04;
   border: none;
   border-radius: 8px;
   padding: 10px;
   color: #fff;
+  cursor: pointer;
+  transition: ease 0.5s;
+}
+
+.link-btn a:hover {
+  background-color: #ddd;
+  color: #333;
 }
 
 .link-btn {
   width: 100%;
   margin-top: 40px;
   text-align: center;
+  margin-bottom: 40px;
 }
 
 .review-item img {
   width: 20%;
   height: 80px;
   border-radius: 50%;
+  border: 2px solid #ddbd04;
 }
 
 .review-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border: 1px solid #ddbd04;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+.rate {
+  color: #ddbd04;
+}
+
+.item-single {
+  margin-left: 15px;
+}
+
+.review-page h1 {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.home-comment {
+  background-color: #888;
+  padding: 10px;
 }

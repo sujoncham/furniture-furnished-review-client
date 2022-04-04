@@ -3,9 +3,9 @@ import './Product.css';
 
 const product =  {
     "id": 1,
-    "title": "Your Next phone Your best phone",
-    "para": "If you aren't satisfied with the build tool and configuration choices, you can eject at any time. This command will remove the single build dependency from your project.",
-    "image": "./images/image-1.jpg"
+    "title": "Explore our furniture & home furnishing product",
+    "para": "Furnished Furniture is proud to offer the your area the best in home furnishings at low prices. Stop into our showroom or visit our website to see all we have what you want to buy.",
+    "image": "./images/sofa.png"
   }
 
 

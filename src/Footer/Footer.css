@@ -1,3 +1,24 @@
 .footer {
-  background-color: #333;
+  background-color: #888;
+  text-align: center;
+  padding: 25px;
+}
+
+.footer h1 {
+  color: #ddbd04;
+}
+
+.social-link a {
+  padding: 10px 16px;
+  margin: 2px;
+  color: #fff;
+  text-decoration: none;
+  background-color: #ddbd04;
+  transition: ease 0.5s;
+  border-radius: 8px;
+}
+
+.social-link a:hover {
+  background-color: #ddd;
+  color: #333;
 }
