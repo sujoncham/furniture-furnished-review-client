@@ -1,5 +1,5 @@
 import React from 'react';
-import { Line, LineChart, XAxis, YAxis } from 'recharts';
+import { Line, LineChart, Tooltip, XAxis, YAxis } from 'recharts';
 
 const MyChart = () => {
 
@@ -47,6 +47,7 @@ const MyChart = () => {
             <Line dataKey={'sell'}></Line>
             <XAxis dataKey={'month'}></XAxis>
             <YAxis></YAxis>
+            <Tooltip></Tooltip>
         </LineChart>
     );
 };

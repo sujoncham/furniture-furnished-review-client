@@ -9,7 +9,7 @@ const Home = () => {
             <Product></Product>
             <ProductReview></ProductReview>
             <div className='link-btn'>
-            <Link to="/review">See all comments</Link>
+            <Link to="/review">Show all comments</Link>
             </div>
         </div>
     );
