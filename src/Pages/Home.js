@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import HomeReview from '../components/Product/HomeReview';
 import Product from '../components/Product/Product';
-import ProductReview from '../components/Product/ProductReview';
 
 const Home = () => {
     return (
         <div>
             <Product></Product>
-            <ProductReview></ProductReview>
+            <HomeReview></HomeReview>
             <div className='link-btn'>
             <Link to="/review">Show all comments</Link>
             </div>

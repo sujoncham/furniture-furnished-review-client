@@ -1,18 +1,19 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
+import Footer from "./Footer/Footer";
 import Header from "./Header/Header";
-import Home from "./Pages/Home";
-import Review from "./Pages/Review";
-import Dashboard from "./Pages/Dashboard";
-import Blogs from "./Pages/Blogs";
 import About from "./Pages/About";
+import Blogs from "./Pages/Blogs";
+import Dashboard from "./Pages/Dashboard";
+import Home from "./Pages/Home";
 import Page404 from "./Pages/Page404";
+import Review from "./Pages/Review";
 
 function App() {
   return (
     <div className="App">
+      <Header></Header>
       <div className="container">
-        <Header></Header>
         <Routes>
           <Route path="/" element={<Home></Home>}></Route>
           <Route path="/review" element={<Review></Review>}></Route>
@@ -22,6 +23,7 @@ function App() {
           <Route path="*" element={<Page404></Page404>}></Route>
         </Routes>
       </div>
+      <Footer></Footer>
     </div>
   );
 }
