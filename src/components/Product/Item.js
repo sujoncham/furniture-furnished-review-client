@@ -11,6 +11,9 @@ const Item = ({review}) => {
                 <h3>{name}</h3>
                 <p>{para}</p>
                 <p>Rating: <span className='rate'>{rating}</span></p>
+                <div className='m-3'>
+                    <button className='btn btn-primary w-50'>See details</button>
+                </div>
             </div>
         </div>
     );

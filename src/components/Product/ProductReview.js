@@ -3,7 +3,7 @@ import useReview from '../../hooks/useReview';
 import Item from './Item';
 
 const ProductReview = () => {
-    const [reviews, setReviews] = useReview();
+    const [reviews] = useReview();
     // const reviewData = reviews.slice(0, 3);
 
     return (
