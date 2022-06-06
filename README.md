@@ -14,3 +14,9 @@ Netlify Website Link: (https://sage-fairy-027a2c.netlify.app/)
 - Blog page for three answers
 - Menu active with Custom Link
 - Footer added
+
+## Project Tools
+
+- React Js, React-Router-Dom, Bootstrap, Recharts
+- Firsebase, heroku
+- NodeJs, Express Js, MongoDB

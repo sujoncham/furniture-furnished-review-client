@@ -1,8 +1,14 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Product.css';
 
 const Item = ({review}) => {
     const {name, img, para, rating} = review;
+    const navigate = useNavigate();
+    const handleSingleItem = ()=>{
+        navigate('/singleDetails');
+    }
+
 
     return (
         <div className='review-item'>
@@ -12,7 +18,7 @@ const Item = ({review}) => {
                 <p>{para}</p>
                 <p>Rating: <span className='rate'>{rating}</span></p>
                 <div className='m-3'>
-                    <button className='btn btn-primary w-50'>See details</button>
+                    <button onClick={handleSingleItem} className='btn btn-primary w-50'>See details</button>
                 </div>
             </div>
         </div>
