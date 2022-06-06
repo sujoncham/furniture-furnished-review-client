@@ -1,0 +1,93 @@
+[
+  {
+    "id": 1,
+    "name": "Furniture 1",
+    "description": "This is Furniture",
+    "price": 132,
+    "img": "https://i.ibb.co/0mV41qd/furniture1.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Furniture 1",
+    "description": "This is Furniture",
+    "price": 132,
+    "img": "https://i.ibb.co/MkZ30f1/furniture2.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Furniture 1",
+    "description": "This is Furniture",
+    "price": 132,
+    "img": "https://i.ibb.co/fv0jgPM/furniture3.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Furniture 1",
+    "description": "This is Furniture",
+    "price": 132,
+    "img": "https://i.ibb.co/hgmkj2b/furniture4.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Furniture 1",
+    "description": "This is Furniture",
+    "price": 132,
+    "img": "https://i.ibb.co/5hHJDFn/furniture6.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Furniture 1",
+    "description": "This is Furniture",
+    "price": 132,
+    "img": "https://i.ibb.co/5hHJDFn/furniture6.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Furniture 1",
+    "description": "This is Furniture",
+    "price": 132,
+    "img": "https://i.ibb.co/HDNdtkZ/furniture7.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Furniture 1",
+    "description": "This is Furniture",
+    "price": 132,
+    "img": "https://i.ibb.co/6yMdQV2/furniture9.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Furniture 1",
+    "description": "This is Furniture",
+    "price": 132,
+    "img": "https://i.ibb.co/PwSL2bp/furniture8.jpg"
+  },
+  {
+    "id": 10,
+    "name": "Furniture 1",
+    "description": "This is Furniture",
+    "price": 132,
+    "img": "https://i.ibb.co/64XhFLC/furniture10.jpg"
+  },
+  {
+    "id": 11,
+    "name": "Furniture 1",
+    "description": "This is Furniture",
+    "price": 132,
+    "img": "https://i.ibb.co/1spDqCj/furniture11.jpg"
+  },
+  {
+    "id": 12,
+    "name": "Furniture 1",
+    "description": "This is Furniture",
+    "price": 132,
+    "img": "https://i.ibb.co/f4P9p6S/furniture12.jpg"
+  },
+  {
+    "id": 13,
+    "name": "Furniture 1",
+    "description": "This is Furniture",
+    "price": 132,
+    "img": "https://i.ibb.co/dQtNJTy/furniture13.jpg"
+  }
+]
