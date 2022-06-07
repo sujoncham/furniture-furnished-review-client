@@ -29,8 +29,8 @@ const Login = () => {
         <div className='container mt-5 mb-5'>
         <div className='row justify-content-md-center'>
             
-        <div className='col-md-6 col-offset-3'>
-        <h1 className='mb-3'>Login</h1>
+        <div className='col-md-4 col-offset-4'>
+        <h1 className='mb-3 text-center text-uppercase'>Login</h1>
             <Form>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
@@ -44,13 +44,13 @@ const Login = () => {
                 <Form.Group className="mb-3" controlId="formBasicCheckbox">
                     <Form.Check type="checkbox" label="Check me out" />
                 </Form.Group>
-                <Button variant="primary" type="submit">
+                <Button className='w-50 text-center' variant="primary" type="submit">
                     Submit
                 </Button>
             </Form>
             <p>New at Furniture Store? please, <Link to='/register'>create account</Link> </p>
             <div className='mt-5'>
-            <Button 
+            <Button className='w-100'
             onClick={() => signInWithGoogle()} 
             variant="primary" 
             type="submit">

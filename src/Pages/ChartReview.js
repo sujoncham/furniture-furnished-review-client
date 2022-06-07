@@ -5,7 +5,7 @@ import MonthBarChart from "../MyChart/MonthBarChart";
 import PieChartMonth from "../MyChart/PieChartMonth";
 import "./pages.css";
 
-const Dashboard = () => {
+const ChartReview = () => {
   return (
     <div className="board-container">
       <h1>Dashboard</h1>
@@ -32,4 +32,4 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+export default ChartReview;

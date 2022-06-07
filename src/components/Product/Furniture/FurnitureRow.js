@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const FurnitureRow = ({furniture}) => {
-    const {id, name, description, img, price} = furniture;
+    const {_id, name, description, img, price} = furniture;
     const navigate = useNavigate();
 
     const handleButton = (id) =>{
@@ -14,10 +14,10 @@ const FurnitureRow = ({furniture}) => {
         <div className='furniture'>
             <img className='w-100' src={img} alt="" />
             <div className='mt-2'>
-            <h3>{name}</h3>
-            <p>{price}</p>
-            <p>{description}</p>
-            <button onClick={()=>handleButton(id)} className='btn btn-primary'>Add to Cart</button>
+            <h4>{name}</h4>
+            <p>{description.slice(0, 100)}...</p>
+            <p>Price: ${price}</p>
+            <button onClick={()=>handleButton(_id)} className='btn btn-primary'>Add to Cart</button>
             </div>
         </div>
         </div>

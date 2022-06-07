@@ -13,25 +13,24 @@ const Header = () => {
       };
 
     return (
-        <div className="top-header">
+        <div className="bg-secondary sticky-top">
         <div className="container">
-            <div className='header'>
+            <div className='d-flex justify-content-between align-items-center'>
             <h1>Furniture Furnished</h1>
-            <nav className='menu'>
-                <ul>
-                    <li><CustomLink to="/">Home</CustomLink> </li>
-                    <li><CustomLink to="/review">Review</CustomLink> </li>
-                    <li><CustomLink to="/furniture">Furniture</CustomLink> </li>
-                    <li><CustomLink to="/dashboard">Dashboard</CustomLink> </li>
-                    <li><CustomLink to="/blogs">Blogs</CustomLink> </li>
-                    <li><CustomLink to="/about">About</CustomLink> </li>
-                    {
-                      user ? 
-                      <li><button onClick={logout} className='btn btn-link'>LogOut</button></li>
-                      :
-                       <li><CustomLink to="/login">Login</CustomLink> </li>
-                    }
-                </ul>
+            <nav className='d-flex justify-content-center align-items-center gap-3'>
+                <CustomLink to="/">Home</CustomLink> 
+                <CustomLink to="/about">About</CustomLink> 
+                <CustomLink to="/blogs">Blogs</CustomLink> 
+                <CustomLink to="/review">Review</CustomLink> 
+                <CustomLink to="/furniture">Furniture</CustomLink> 
+                <CustomLink to="/chartReview">ChartReview</CustomLink> 
+                {
+                    user ? 
+                    <button onClick={logout} className='btn btn-link'>LogOut</button>
+                    :
+                    <CustomLink to="/login">Login</CustomLink> 
+                }
+                
             </nav>
         </div>
         </div>

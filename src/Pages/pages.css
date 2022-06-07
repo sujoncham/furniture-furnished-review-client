@@ -34,21 +34,8 @@
   text-align: center;
 }
 
-.question {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
 .answer {
   border: 1px solid #ddbd04;
   padding: 10px;
   margin-bottom: 20px;
-}
-
-.blogs h1 {
-  text-align: center;
-}
-
-.about-page {
-  padding: 20px;
 }
