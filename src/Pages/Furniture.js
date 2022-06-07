@@ -8,7 +8,7 @@ const Furniture = () => {
         fetch('http://localhost:5000/furniture')
         .then(res => res.json())
         .then(data => setFurnitures(data));
-    }, [])
+    }, []);
     return (
         <div className='container'>
             <h1 className='mt-5'>Furnitures : {furnitures.length}</h1>

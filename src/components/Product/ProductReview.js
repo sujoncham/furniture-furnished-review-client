@@ -7,9 +7,9 @@ const ProductReview = () => {
     // const reviewData = reviews.slice(0, 3);
 
     return (
-        <div>
-            <h3>Product Review : {reviews.length}</h3>
-           <div className='review'>
+        <div className='container mt-5 mb-5'>
+            <h3 className='p-1'>Product Review : {reviews.length}</h3>
+           <div className='row'>
            {
                 reviews.map(review => <Item key={review.id} review={review}></Item>)
             }

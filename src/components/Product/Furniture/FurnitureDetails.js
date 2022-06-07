@@ -23,8 +23,8 @@ const FurnitureDetails = () => {
                 <div className='p-1'>
                     <h3>{furnitures.name}</h3>
                     <p>{furnitures.description}</p>
-                    <p>{furnitures.price}</p>
-                    <button className='btn btn-primary'>Buy</button>
+                    <p>Price: ${furnitures.price}</p>
+                    <button className='btn btn-primary w-50'>Buy</button>
                 </div>
                 </div>
             </div>
