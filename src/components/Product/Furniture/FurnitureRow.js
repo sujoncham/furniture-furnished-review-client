@@ -1,4 +1,3 @@
-import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const FurnitureRow = ({furniture}) => {
@@ -14,7 +13,7 @@ const FurnitureRow = ({furniture}) => {
         <div className='furniture'>
             <img className='w-100' src={img} alt="" />
             <div className='mt-2'>
-            <h4>{name}</h4>
+            <h5>{name}</h5>
             <p>{description.slice(0, 100)}...</p>
             <p>Price: ${price}</p>
             <button onClick={()=>handleButton(_id)} className='btn btn-primary'>Add to Cart</button>

@@ -1,5 +1,4 @@
 import { signOut } from 'firebase/auth';
-import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import CustomLink from '../components/CustomLink/CustomLink';
 import auth from '../components/Firebase/Firebase.init';
@@ -25,7 +24,7 @@ const Header = () => {
                 <CustomLink to="/furniture">Furniture</CustomLink> 
                 <CustomLink to="/chartReview">ChartReview</CustomLink> 
                 {
-                    user && <p>{user?.displayName}</p>
+                    user && <p className='mt-2'>{user?.displayName.slice(0, 6)}</p>
                 }
                 {
                     user ? 
