@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import FurnitureRow from '../components/Product/Furniture/FurnitureRow';
 
 const Furniture = () => {
     const [furnitures, setFurnitures] = useState([]);
 
     useEffect( ()=>{
-        fetch('http://localhost:5000/furniture')
+        fetch('https://sleepy-thicket-05560.herokuapp.com/furniture')
         .then(res => res.json())
         .then(data => setFurnitures(data));
     }, []);

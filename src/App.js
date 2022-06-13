@@ -3,6 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import Login from './components/AuthenticateSystem/Login';
 import Register from './components/AuthenticateSystem/Register';
+import RequireAuth from './components/AuthenticateSystem/RequireAuth/RequireAuth';
 import FurnitureDetails from './components/Product/Furniture/FurnitureDetails';
 import Footer from "./Footer/Footer";
 import Header from "./Header/Header";
@@ -27,7 +28,9 @@ function App() {
           <Route path="/about" element={<About></About>}></Route>
           <Route path="/login" element={<Login></Login>}></Route>
           <Route path="/furniture" element={<Furniture></Furniture>}></Route>
-          <Route path="/furniture/:furnId" element={<FurnitureDetails></FurnitureDetails>}></Route>
+          <Route path="/furniture/:furnId" element={<RequireAuth>
+            <FurnitureDetails></FurnitureDetails>
+          </RequireAuth>}></Route>
           <Route path="/register" element={<Register></Register>}></Route>
           <Route path="*" element={<Page404></Page404>}></Route>
         </Routes>

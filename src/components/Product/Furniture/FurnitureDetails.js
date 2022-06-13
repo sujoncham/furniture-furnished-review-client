@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
 const FurnitureDetails = () => {
@@ -7,7 +7,7 @@ const FurnitureDetails = () => {
     const [furnitures, setFurnitures] = useState([]);
 
     useEffect( () => {
-        fetch(`http://localhost:5000/furniture/${furnId}`)
+        fetch(`https://sleepy-thicket-05560.herokuapp.com/furniture/${furnId}`)
         .then(res => res.json())
         .then(data => setFurnitures(data));
     }, [furnId]);
