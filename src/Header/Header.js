@@ -23,6 +23,7 @@ const Header = () => {
                 <CustomLink to="/review">Review</CustomLink> 
                 <CustomLink to="/furniture">Furniture</CustomLink> 
                 <CustomLink to="/chartReview">ChartReview</CustomLink> 
+                <CustomLink to="/dashboard">Dashboard</CustomLink> 
                 {
                     user && <p className='mt-2'>{user?.displayName.slice(0, 6)}</p>
                 }

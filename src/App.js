@@ -10,6 +10,7 @@ import Header from "./Header/Header";
 import About from "./Pages/About";
 import Blogs from "./Pages/Blogs";
 import ChartReview from "./Pages/ChartReview";
+import Dashboard from './Pages/Dashboard';
 import Furniture from './Pages/Furniture';
 import Home from "./Pages/Home";
 import Page404 from "./Pages/Page404";
@@ -32,6 +33,7 @@ function App() {
             <FurnitureDetails></FurnitureDetails>
           </RequireAuth>}></Route>
           <Route path="/register" element={<Register></Register>}></Route>
+          <Route path="/dashboard" element={<Dashboard></Dashboard>}></Route>
           <Route path="*" element={<Page404></Page404>}></Route>
         </Routes>
       </div>
