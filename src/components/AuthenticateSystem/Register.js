@@ -1,4 +1,3 @@
-import React from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { useCreateUserWithEmailAndPassword, useSignInWithGoogle, useUpdateProfile } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from 'react-router-dom';
@@ -16,18 +15,14 @@ const Register = () => {
     const [updateProfile] = useUpdateProfile(auth);
     const navigate = useNavigate()
 
-
-
     if (error || gError) {
-        return (
-          <div>
-            <p>Error: {error.message}</p>
-          </div>
-        );
+        return <p>Error: {error.message}</p>
       }
+
       if (loading || gLoading) {
         return <p>Loading...</p>;
       }
+
       if (user || gUser) {
         navigate('/');
       }

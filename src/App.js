@@ -4,6 +4,8 @@ import "./App.css";
 import Login from './components/AuthenticateSystem/Login';
 import Register from './components/AuthenticateSystem/Register';
 import RequireAuth from './components/AuthenticateSystem/RequireAuth/RequireAuth';
+import AllUsers from './components/Dashboard/AllUsers';
+import HomeDashboard from './components/Dashboard/HomeDashboard';
 import FurnitureDetails from './components/Product/Furniture/FurnitureDetails';
 import Footer from "./Footer/Footer";
 import Header from "./Header/Header";
@@ -33,7 +35,11 @@ function App() {
             <FurnitureDetails></FurnitureDetails>
           </RequireAuth>}></Route>
           <Route path="/register" element={<Register></Register>}></Route>
-          <Route path="/dashboard" element={<Dashboard></Dashboard>}></Route>
+          <Route path="/dashboard" element={<Dashboard></Dashboard>}>
+            
+            <Route index element={<HomeDashboard></HomeDashboard>}></Route>
+            <Route path='allUsers' element={<AllUsers></AllUsers>}></Route>
+          </Route>
           <Route path="*" element={<Page404></Page404>}></Route>
         </Routes>
       </div>

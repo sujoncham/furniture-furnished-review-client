@@ -1,14 +1,13 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
+import Banner from '../components/Product/Banner';
 import HomeFurniture from '../components/Product/HomeFurniture';
 import HomeReview from '../components/Product/HomeReview';
-import Product from '../components/Product/Product';
 
 const Home = () => {
     
     return (
         <div className='home-page'>
-            <Product></Product>
+            <Banner></Banner>
             <HomeFurniture></HomeFurniture>
             <HomeReview></HomeReview>
             <div className='link-btn'>

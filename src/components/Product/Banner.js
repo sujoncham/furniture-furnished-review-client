@@ -1,4 +1,3 @@
-import React from 'react';
 import './Product.css';
 
 const product =  {
@@ -9,19 +8,21 @@ const product =  {
   }
 
 
-const Product = () => {
+const Banner = () => {
     return (
-        <div className='product'>
-            <div className='content-left'>
+        <div className='container mt-5 mb-5'>
+            <div className="row justify-content-center align-items-center">
+            <div className='col-md-6'>
                 <h1>{product.title}</h1>
                 <p>{product.para}</p>
-                <button>see detail</button>
+                <button className='btn btn-warning'>see more</button>
             </div>
-            <div className='content-right'>
-                <img src={product.image} alt="" />
+            <div className='col-md-6'>
+                <img className='w-100' src={product.image} alt="" />
+            </div>
             </div>
         </div>
     );
 };
 
-export default Product;
+export default Banner;

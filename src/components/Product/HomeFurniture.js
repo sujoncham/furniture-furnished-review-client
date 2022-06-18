@@ -18,7 +18,8 @@ const HomeFurniture = () => {
     }
 
     return (
-        <div className='container'>
+        <div className='container mt-5'>
+            <h1 className='text-center mt-5 p-5'>Latest Product</h1>
             <div className="row">
                 {
                     homeData.map(furniture=> <div 
