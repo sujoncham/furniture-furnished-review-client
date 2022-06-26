@@ -16,11 +16,13 @@ const FurnitureDetails = () => {
         const name = furniture.name;
         const description = furniture.description;
         const price = furniture.price;
+        const img = furniture.img;
 
         const productDetails = {
             name, 
             description, 
-            price
+            price,
+            img
         };
 
         fetch('https://sleepy-thicket-05560.herokuapp.com/order', {

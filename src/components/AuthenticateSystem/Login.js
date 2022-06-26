@@ -2,6 +2,8 @@ import { Button, Form } from 'react-bootstrap';
 import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../Firebase/Firebase.init';
+import LoadingSpinner from '../LoadingSpinner/LoadingSpinner';
+
 
 const Login = () => {
     const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
@@ -13,12 +15,13 @@ const Login = () => {
     ] = useSignInWithEmailAndPassword(auth);
     const navigate = useNavigate();
     
+    let errorHandle;
     if (error || gError) {
-      return <p>Error: {error.message}</p>
+      errorHandle = `${error?.message || gError.message}`;
     }
 
     if (loading || gLoading) {
-      return <p>Loading...</p>;
+      return <LoadingSpinner></LoadingSpinner>;
     }
   
       if (user || gUser) {
@@ -30,7 +33,12 @@ const Login = () => {
         event.preventDefault();
         const email = event.target.email.value;
         const password = event.target.password.value;
-        signInWithEmailAndPassword(email, password);
+        if(email === '' || password === ''){
+
+          signInWithEmailAndPassword(email, password);
+        } else{
+          errorHandle = "Email or Password is empty!!"
+        }
       }
 
     return (
@@ -54,6 +62,7 @@ const Login = () => {
                     Submit
                 </Button>
             </Form>
+            <p className='text-danger'>{errorHandle}</p>
             <p>New at Furniture Store? please, <Link to='/register'>create account</Link> </p>
             <div className='mt-5'>
             <Button className='w-100'

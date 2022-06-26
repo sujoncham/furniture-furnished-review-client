@@ -2,6 +2,7 @@ import { Button, Form } from 'react-bootstrap';
 import { useCreateUserWithEmailAndPassword, useSignInWithGoogle, useUpdateProfile } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../Firebase/Firebase.init';
+import useToken from '../hooks/useToken';
 
 
 const Register = () => {
@@ -13,7 +14,8 @@ const Register = () => {
       error,
     ] = useCreateUserWithEmailAndPassword(auth);
     const [updateProfile] = useUpdateProfile(auth);
-    const navigate = useNavigate()
+    const navigate = useNavigate();
+    const [token] = useToken(user || gUser);
 
     if (error || gError) {
         return <p>Error: {error.message}</p>
@@ -23,7 +25,7 @@ const Register = () => {
         return <p>Loading...</p>;
       }
 
-      if (user || gUser) {
+      if (token) {
         navigate('/');
       }
 
