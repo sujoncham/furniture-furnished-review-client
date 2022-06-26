@@ -1,7 +1,8 @@
 import { Button, Form } from 'react-bootstrap';
 import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../Firebase/Firebase.init';
+import useToken from '../hooks/useToken';
 import LoadingSpinner from '../LoadingSpinner/LoadingSpinner';
 
 
@@ -14,6 +15,10 @@ const Login = () => {
       error,
     ] = useSignInWithEmailAndPassword(auth);
     const navigate = useNavigate();
+    const [token] = useToken(user || gUser);
+    const location = useLocation();
+
+    let from = location.state?.from?.pathname || "/";
     
     let errorHandle;
     if (error || gError) {
@@ -24,8 +29,8 @@ const Login = () => {
       return <LoadingSpinner></LoadingSpinner>;
     }
   
-      if (user || gUser) {
-        navigate('/');
+      if (token) {
+        navigate(from, { replace: true });
       }
  
 
@@ -33,12 +38,8 @@ const Login = () => {
         event.preventDefault();
         const email = event.target.email.value;
         const password = event.target.password.value;
-        if(email === '' || password === ''){
-
+        
           signInWithEmailAndPassword(email, password);
-        } else{
-          errorHandle = "Email or Password is empty!!"
-        }
       }
 
     return (

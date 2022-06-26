@@ -1,8 +1,9 @@
 import { Button, Form } from 'react-bootstrap';
 import { useCreateUserWithEmailAndPassword, useSignInWithGoogle, useUpdateProfile } from 'react-firebase-hooks/auth';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../Firebase/Firebase.init';
 import useToken from '../hooks/useToken';
+import LoadingSpinner from '../LoadingSpinner/LoadingSpinner';
 
 
 const Register = () => {
@@ -16,17 +17,21 @@ const Register = () => {
     const [updateProfile] = useUpdateProfile(auth);
     const navigate = useNavigate();
     const [token] = useToken(user || gUser);
+    const location = useLocation();
 
+    let from = location.state?.from?.pathname || "/";
+
+    let regisError;
     if (error || gError) {
-        return <p>Error: {error.message}</p>
+      regisError = `${error?.message || gError?.message}`;
       }
 
       if (loading || gLoading) {
-        return <p>Loading...</p>;
+        return <LoadingSpinner></LoadingSpinner>;
       }
 
       if (token) {
-        navigate('/');
+        navigate(from, { replace: true });
       }
 
       const handleRegister = async(event) =>{
@@ -65,6 +70,7 @@ const Register = () => {
                               Submit
                           </Button>
                       </Form>
+                      <p className='text-danger'>{regisError}</p>
                       <p>Already have an account? please, <Link to='/login'>Login</Link> here</p>
                     <div className='mt-5'>
                     <Button 
