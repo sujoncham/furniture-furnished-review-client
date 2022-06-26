@@ -1,29 +1,37 @@
-import React from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
-import { Link } from 'react-router-dom';
+import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { Link, useNavigate } from 'react-router-dom';
 import auth from '../Firebase/Firebase.init';
 
 const Login = () => {
-    const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
-    if (error) {
-        return (
-          <div>
-            <p>Error: {error.message}</p>
-          </div>
-        );
-      }
-      if (loading) {
-        return <p>Loading...</p>;
-      }
-      if (user) {
-        return (
-          <div>
-            <p>Signed In User: {user.email}</p>
-          </div>
-        );
-      }
+    const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
+    const [
+      signInWithEmailAndPassword,
+      user,
+      loading,
+      error,
+    ] = useSignInWithEmailAndPassword(auth);
+    const navigate = useNavigate();
+    
+    if (error || gError) {
+      return <p>Error: {error.message}</p>
+    }
 
+    if (loading || gLoading) {
+      return <p>Loading...</p>;
+    }
+  
+      if (user || gUser) {
+        navigate('/');
+      }
+ 
+
+      const handleFormLogin = (event) =>{
+        event.preventDefault();
+        const email = event.target.email.value;
+        const password = event.target.password.value;
+        signInWithEmailAndPassword(email, password);
+      }
 
     return (
         <div className='container mt-5 mb-5'>
@@ -31,15 +39,15 @@ const Login = () => {
             
         <div className='col-md-4 col-offset-4'>
         <h1 className='mb-3 text-center text-uppercase'>Login</h1>
-            <Form>
+            <Form onSubmit={handleFormLogin}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
-                    <Form.Control type="email" placeholder="Enter email" />
+                    <Form.Control type="email" name='email' placeholder="Enter email" />
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formBasicPassword">
                     <Form.Label>Password</Form.Label>
-                    <Form.Control type="password" placeholder="Password" />
+                    <Form.Control type="password" name='password' placeholder="Enter password" />
                 </Form.Group>
           
                 <Button className='w-50 text-center' variant="primary" type="submit">

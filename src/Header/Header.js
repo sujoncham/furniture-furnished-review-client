@@ -1,6 +1,7 @@
 import { signOut } from 'firebase/auth';
-import { Container, Nav, Navbar } from 'react-bootstrap';
+import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import { useNavigate } from 'react-router-dom';
 import logo from '../assets/logo/logo.jpg';
 import CustomLink from '../components/CustomLink/CustomLink';
 import auth from '../components/Firebase/Firebase.init';
@@ -8,10 +9,15 @@ import './Header.css';
 
 const Header = () => {
     const [user] = useAuthState(auth);
+    const navigate = useNavigate();
 
     const logout = () => {
         signOut(auth);
       };
+
+      const myProfile = () =>{
+        navigate(`/profile/${user?.uid}`);
+      }
 
     return (
         
@@ -32,16 +38,19 @@ const Header = () => {
                             <CustomLink to="/review">Review</CustomLink> 
                             <CustomLink to="/furniture">Furniture</CustomLink> 
                             <CustomLink to="/chartReview">ChartReview</CustomLink> 
-                            <CustomLink to="/dashboard">Dashboard</CustomLink> 
-                            {
-                                user && <p className='mt-2'>{user?.displayName.slice(0, 6)}</p>
-                            }
-                            {
-                                user ? 
-                                <button onClick={logout} className='btn btn-link text-black'>LogOut</button>
-                                :
-                                <CustomLink to="/login">Login</CustomLink> 
-                            }
+                            {user &&  <CustomLink to="/dashboard">Dashboard</CustomLink> }
+                                {
+                                    !user ? 
+                                    <CustomLink to="/login">Login</CustomLink>
+                                    :
+                                    <NavDropdown className='profile' title="Profile" id="collasible-nav-dropdown">
+                                    <NavDropdown.Item to='/'>{user && user?.displayName?.slice(0, 6)}</NavDropdown.Item>
+                                    <NavDropdown.Item as={CustomLink} to='/' onClick={logout} className='text-black'>LogOut</NavDropdown.Item>
+                                    <NavDropdown.Divider />
+                                    <NavDropdown.Item onClick={myProfile}>Profile</NavDropdown.Item>
+                                    </NavDropdown>
+                                }
+                   
                     </Nav>
                 </Navbar.Collapse>
             </Container>

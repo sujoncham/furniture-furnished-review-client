@@ -16,7 +16,7 @@ const FurnitureRow = ({furniture}) => {
             <h5>{name}</h5>
             <p>{description.slice(0, 100)}...</p>
             <p>Price: ${price}</p>
-            <button onClick={()=>handleButton(_id)} className='btn btn-primary'>Add to Cart</button>
+            <button onClick={()=>handleButton(_id)} className='btn btn-warning'>Add to Cart</button>
             </div>
         </div>
         </div>

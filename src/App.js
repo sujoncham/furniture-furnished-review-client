@@ -1,11 +1,15 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Route, Routes } from "react-router-dom";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import "./App.css";
 import Login from './components/AuthenticateSystem/Login';
 import Register from './components/AuthenticateSystem/Register';
 import RequireAuth from './components/AuthenticateSystem/RequireAuth/RequireAuth';
 import AllUsers from './components/Dashboard/AllUsers';
 import HomeDashboard from './components/Dashboard/HomeDashboard';
+import MyOrder from './components/Dashboard/MyOrder';
+import ProductAdd from './components/Dashboard/ProductAdd';
 import FurnitureDetails from './components/Product/Furniture/FurnitureDetails';
 import Footer from "./Footer/Footer";
 import Header from "./Header/Header";
@@ -16,6 +20,7 @@ import Dashboard from './Pages/Dashboard';
 import Furniture from './Pages/Furniture';
 import Home from "./Pages/Home";
 import Page404 from "./Pages/Page404";
+import Profile from './Pages/Profile';
 import Review from "./Pages/Review";
 
 function App() {
@@ -31,19 +36,24 @@ function App() {
           <Route path="/about" element={<About></About>}></Route>
           <Route path="/login" element={<Login></Login>}></Route>
           <Route path="/furniture" element={<Furniture></Furniture>}></Route>
+          <Route path="/profile/:profileId" element={<Profile></Profile>}></Route>
           <Route path="/furniture/:furnId" element={<RequireAuth>
             <FurnitureDetails></FurnitureDetails>
           </RequireAuth>}></Route>
           <Route path="/register" element={<Register></Register>}></Route>
+
           <Route path="/dashboard" element={<Dashboard></Dashboard>}>
             
             <Route index element={<HomeDashboard></HomeDashboard>}></Route>
             <Route path='allUsers' element={<AllUsers></AllUsers>}></Route>
+            <Route path='productAdd' element={<ProductAdd></ProductAdd>}></Route>
+            <Route path='myOrder' element={<MyOrder></MyOrder>}></Route>
           </Route>
           <Route path="*" element={<Page404></Page404>}></Route>
         </Routes>
       </div>
       <Footer></Footer>
+      <ToastContainer></ToastContainer>
     </div>
   );
 }

@@ -1,4 +1,3 @@
-import React from 'react';
 import useReview from '../../hooks/useReview';
 import Item from './Item';
 
@@ -11,7 +10,7 @@ const ProductReview = () => {
             <h3>Showing Review : {reviewData.length} of {reviews.length}</h3>
            <div className='row'>
            {
-                reviewData.map(review => <Item key={review.id} review={review}></Item>)
+                reviewData.map(review => <Item key={review._id} review={review}></Item>)
             }
            </div>
            
