@@ -5,9 +5,18 @@ const Furniture = () => {
     const [furnitures, setFurnitures] = useState([]);
 
     useEffect( ()=>{
-        fetch('https://sleepy-thicket-05560.herokuapp.com/furniture')
-        .then(res => res.json())
-        .then(data => setFurnitures(data));
+        // fetch('https://sleepy-thicket-05560.herokuapp.com/furniture')
+        // .then(res => res.json())
+        // .then(data => setFurnitures(data));
+
+
+        const furnitureData = async () =>{
+            const res = await fetch('https://sleepy-thicket-05560.herokuapp.com/furniture');
+            const data = await res.json();
+            setFurnitures(data);
+        }
+        furnitureData();
+
     }, []);
     return (
         <div className='container'>

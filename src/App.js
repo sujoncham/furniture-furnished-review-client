@@ -10,6 +10,7 @@ import AllUsers from './components/Dashboard/AllUsers';
 import HomeDashboard from './components/Dashboard/HomeDashboard';
 import MyOrder from './components/Dashboard/MyOrder';
 import ProductAdd from './components/Dashboard/ProductAdd';
+import Profile from './components/Dashboard/Profile';
 import FurnitureDetails from './components/Product/Furniture/FurnitureDetails';
 import Footer from "./Footer/Footer";
 import Header from "./Header/Header";
@@ -20,7 +21,6 @@ import Dashboard from './Pages/Dashboard';
 import Furniture from './Pages/Furniture';
 import Home from "./Pages/Home";
 import Page404 from "./Pages/Page404";
-import Profile from './Pages/Profile';
 import Review from "./Pages/Review";
 
 function App() {

@@ -1,14 +1,22 @@
 import { useEffect, useState } from 'react';
 import { Table } from 'react-bootstrap';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../Firebase/Firebase.init';
 
 const MyOrder = () => {
+    const [user] = useAuthState(auth);
     const [orders, setOrders] = useState([]);
 
     useEffect( ()=>{
-        fetch('https://sleepy-thicket-05560.herokuapp.com/order')
+        fetch(`https://sleepy-thicket-05560.herokuapp.com/order?order=${user?.email}`, {
+            method: 'GET',
+            headers:{
+                'authorization' : `Bearer ${localStorage.getItem('accessToken')}`,
+            }
+        })
         .then(res => res.json())
         .then(data => setOrders(data));
-    }, []);
+    }, [user]);
     return (
         <Table striped bordered hover size="sm">
         <thead>

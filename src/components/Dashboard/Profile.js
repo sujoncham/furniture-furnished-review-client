@@ -1,9 +1,8 @@
-import axios from 'axios';
 import { Button, Form } from 'react-bootstrap';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useParams } from "react-router-dom";
 import { toast } from 'react-toastify';
-import auth from '../components/Firebase/Firebase.init';
+import auth from '../Firebase/Firebase.init';
 
 const Profile = () => {
     const {profileId} = useParams();
@@ -11,21 +10,27 @@ const Profile = () => {
 
     const handleProfile = (event) =>{
         event.preventDefault();
-        const userName = user.displayName;
+        const name = user.displayName;
         const email = user.email;
         const fullName = event.target.fullName.value;
         const skills = event.target.skills.value;
         const description = event.target.description.value;
-        const profileUpdate = {userName, email, fullName, description, skills};
+        const profileUpdate = {name, email, fullName, description, skills};
         console.log(profileUpdate);
 
         // post data
-     
-        axios.post(`https://sleepy-thicket-05560.herokuapp.com/profile`, profileUpdate)
-        .then(response => {
-            // console.log(response);
-            toast("Profile data successfully");
+
+        fetch(`http://localhost:5000/profile?profile=${profileId}`, {
+            method: 'PUT',
+            headers:{
+                'content-type' : 'applicaton/json',
+            },
+            body: JSON.stringify(profileUpdate),
         })
+        .then(res =>res.json())
+        .then(data =>{
+            toast("Profile data successfully");
+        });
     }
 
     return (

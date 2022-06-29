@@ -16,8 +16,8 @@ const Header = () => {
         localStorage.removeItem('accessToken');
       };
 
-      const myProfile = () =>{
-        navigate(`/profile/${user?.uid}`);
+      const myProfile = (id) =>{
+        navigate(`/profile/${id}`);
       }
 
     return (
@@ -48,7 +48,7 @@ const Header = () => {
                                     <NavDropdown.Item to='/'>{user && user?.displayName?.slice(0, 6)}</NavDropdown.Item>
                                     <NavDropdown.Item as={CustomLink} to='/' onClick={logout} className='text-black'>LogOut</NavDropdown.Item>
                                     <NavDropdown.Divider />
-                                    <NavDropdown.Item onClick={myProfile}>Profile</NavDropdown.Item>
+                                    <NavDropdown.Item onClick={()=>myProfile(user?.uid)}>Profile</NavDropdown.Item>
                                     </NavDropdown>
                                 }
                    

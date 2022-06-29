@@ -40,7 +40,7 @@ const Register = () => {
         const email = event.target.email.value;
         const password = event.target.password.value;
 
-        createUserWithEmailAndPassword(email, password);
+        await createUserWithEmailAndPassword(email, password);
         await updateProfile({ displayName:name });
           console.log('Updated profile');
       }

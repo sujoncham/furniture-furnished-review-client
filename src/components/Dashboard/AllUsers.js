@@ -1,8 +1,10 @@
 import { useEffect, useState } from 'react';
 import Table from 'react-bootstrap/Table';
+import { useNavigate } from 'react-router-dom';
 
 const AllUsers = () => {
     const [users, setUsers] = useState([]);
+    const navigate = useNavigate();
 
     useEffect(()=>{
         fetch('http://localhost:5000/user')
@@ -10,23 +12,27 @@ const AllUsers = () => {
         .then(data => setUsers(data));
     }, []);
 
+    const myProfile = (id) =>{
+        navigate(`/profile/${id}`);
+      }
+
     return (
         <Table striped bordered hover size="sm">
             <thead>
                 <tr>
                 <th>#</th>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Username</th>
+                <th>Email</th>
+                <th>Action</th>
+            
                 </tr>
             </thead>
             <tbody>
                {
-                users.map((user, index) => <tr>
-                <td>1</td>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
+                users.map((user, index) => <tr index={index} key={user._id}>
+                <td>{index + 1}</td>
+                <td>{user.email}</td>
+                <td><button onClick={()=>myProfile(user._id)} className='btn btn-primary'>Edit</button></td>
+       
                 </tr>)
                }
       
