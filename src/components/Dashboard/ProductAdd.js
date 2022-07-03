@@ -1,10 +1,42 @@
 import { Button, Form } from 'react-bootstrap';
+import { toast } from 'react-toastify';
 
 const ProductAdd = () => {
+
+    const productSubmit = (event) =>{
+        event.preventDefault();
+        const title = event.target.title.value;
+        const description = event.target.description.value;
+        const price = event.target.price.value;
+        const img = event.target.img.value;
+
+        const addData = {
+            title,
+            description,
+            price,
+            img,
+        };
+
+        fetch('https://sleepy-thicket-05560.herokuapp.com/furniture', {
+            method: 'POST',
+            headers:{
+                'content-type' : 'application/json',
+            },
+            body: JSON.stringify(addData),
+        })
+        .then(res => res.json())
+        .then(data =>{
+            toast('Product post successfully', data);
+            event.target.reset();
+        });
+
+
+    }
+
     return (
         <div className='container'>
             <div className='row'>
-                <Form>
+                <Form onSubmit={productSubmit}>
                     <Form.Group className="mb-3" controlId="formBasicTitle">
                         <Form.Label>Product Title</Form.Label>
                         <Form.Control type="text" name='title' placeholder="add here" />
