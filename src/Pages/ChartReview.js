@@ -7,7 +7,7 @@ import "./pages.css";
 const ChartReview = () => {
   return (
     <div className="container mb-5">
-      <h1 className="mt-5 mb-5 text-center text-warning">Monthly Review Charts</h1>
+      <h1 className="mt-5 mb-5 text-center text-dark">Monthly Review Charts</h1>
 
       <div className="row">
         <div className="col-md-6">

@@ -1,9 +1,9 @@
 import { Table } from 'react-bootstrap';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useQuery } from 'react-query';
-import { toast } from 'react-toastify';
 import auth from '../Firebase/Firebase.init';
 import LoadingSpinner from '../LoadingSpinner/LoadingSpinner';
+import OrderRow from './OrderRow';
 
 const MyOrder = () => {
     const [user] = useAuthState(auth);
@@ -21,22 +21,7 @@ const MyOrder = () => {
     }
 
 
-    const deleteOrder = (id) =>{
-        const confirmDelete = window.confirm("Are you sure to delete this product!!!");
-        if(confirmDelete){
-            fetch(`https://sleepy-thicket-05560.herokuapp.com/order/${id}`, {
-                method: 'DELETE',
-                headers:{
-                    'content-type' : 'application/json',
-                },
-            })
-            .then(res => res.json())
-            .then(data =>{
-                toast('Order deleted successfully', data);
-            });
-        }
-        refetch();
-    }
+   
 
     return (
         <Table striped bordered hover size="sm">
@@ -52,15 +37,7 @@ const MyOrder = () => {
         </thead>
         <tbody>
             {
-                orders.map((order, index)=> <tr key={order._id} index={index} order={order}>
-                <td>{index + 1}</td>
-                <td><img style={{width:60, height:30}} src={order.img} alt="" /></td>
-                <td>{order.name}</td>
-                {/* <td>{order.description.slice(0, 40)}....</td> */}
-                <td>{order.price}</td>
-                <td><button className='btn btn-primary'>Pay</button></td>
-                <td><button onClick={()=>deleteOrder(order._id)} className='btn btn-primary'>delete</button></td>
-                </tr> )
+                orders.map((order, index)=> <OrderRow key={order._id} index={index} order={order} refetch={refetch}></OrderRow> )
             }
            
         </tbody>

@@ -27,7 +27,7 @@ const Header = () => {
                 <Navbar.Brand href="#home">
                     <div className='d-flex justify-content-start'>
                         <img style={{width: 60}} src={logo} alt="" />
-                        <span style={{color: '#3c1361'}} className='p-1 text-uppercase fw-bolder'>Furniture</span>
+                        <span style={{color: '#3c1361'}} className='p-1 text-uppercase fw-bolder'></span>
                     </div>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />

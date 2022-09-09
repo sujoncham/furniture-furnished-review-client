@@ -18,7 +18,7 @@ const Login = () => {
     const [token] = useToken(user || gUser);
     const location = useLocation();
 
-    let from = location.state?.from?.pathname || "/";
+    let from = location.state?.from?.pathName || "/";
     
     let errorHandle;
     if (error || gError) {

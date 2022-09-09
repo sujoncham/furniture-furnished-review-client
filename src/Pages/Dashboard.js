@@ -10,6 +10,7 @@ const Dashboard = () => {
                         <Link to='/dashboard/allUsers' className="nav-link">All Users</Link>
                         <Link to='/dashboard/productAdd' className="nav-link">Product Add</Link>
                         <Link to='/dashboard/myOrder' className="nav-link">My Order</Link>
+                        <Link to='/dashboard/blogAdd' className="nav-link">Add Blog</Link>
                     </nav>
                 </div>
                 <div className="col-md-10">

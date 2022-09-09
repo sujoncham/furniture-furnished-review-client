@@ -7,6 +7,7 @@ import Login from './components/AuthenticateSystem/Login';
 import Register from './components/AuthenticateSystem/Register';
 import RequireAuth from './components/AuthenticateSystem/RequireAuth/RequireAuth';
 import AllUsers from './components/Dashboard/AllUsers';
+import BlogAdd from './components/Dashboard/BlogAdd';
 import HomeDashboard from './components/Dashboard/HomeDashboard';
 import MyOrder from './components/Dashboard/MyOrder';
 import ProductAdd from './components/Dashboard/ProductAdd';
@@ -27,7 +28,7 @@ function App() {
   return (
     <div className="App">
       <Header></Header>
-      <div className="container">
+      
         <Routes>
           <Route path="/" element={<Home></Home>}></Route>
           <Route path="/review" element={<Review></Review>}></Route>
@@ -48,10 +49,11 @@ function App() {
             <Route path='allUsers' element={<AllUsers></AllUsers>}></Route>
             <Route path='productAdd' element={<ProductAdd></ProductAdd>}></Route>
             <Route path='myOrder' element={<MyOrder></MyOrder>}></Route>
+            <Route path='blogAdd' element={<BlogAdd></BlogAdd>}></Route>
           </Route>
           <Route path="*" element={<Page404></Page404>}></Route>
         </Routes>
-      </div>
+      
       <Footer></Footer>
       <ToastContainer></ToastContainer>
     </div>
