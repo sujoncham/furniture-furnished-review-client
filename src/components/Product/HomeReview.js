@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import useReview from '../../hooks/useReview';
 import Item from './Item';
 
@@ -13,6 +14,9 @@ const ProductReview = () => {
                 reviewData.map(review => <Item key={review._id} review={review}></Item>)
             }
            </div>
+           <div className='link-btn'>
+                <Link to="/review">Show all comments</Link>
+            </div>
            
         </div>
     );

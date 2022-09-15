@@ -10,19 +10,19 @@ const slides = [
     },
     {
       id: 2,
-      title: "Innovation our furniture & home furnishing product",
+      title: "Innovation our furniture & home product refreshing",
     description: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here,3",
       link: "https://i.ibb.co/h2D3k0p/service.jpg"
     },
     {
       id: 3,
-      title: "Featuring our furniture & home furnishing product",
+      title: "Featuring our modern furniture & home decorator",
     description: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here,2",
       link: "https://i.ibb.co/yNSV1qz/best-quality.jpg"
     },
     {
       id: 4,
-      title: "Explore our furniture & home furnishing product",
+      title: "Explore our furniture & home design categories",
     description: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here,1",
       link: "https://i.ibb.co/wC6ZFqH/quality.jpg"
     }
@@ -74,7 +74,7 @@ const Slide = (props) => {
           <div className="row">
             
             <div className="col-md-5">
-                <h3 className="text-justify"> {props.image.title}</h3>
+                <h3 style={{color:'#66f'}} className="text-justify"> {props.image.title}</h3>
                 <h5 className="text-justify"> {props.image.description}</h5>
             </div>
             <div className="col-md-7">

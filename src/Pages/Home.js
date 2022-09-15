@@ -1,7 +1,7 @@
-import { Link } from 'react-router-dom';
 import Banner from '../components/Banner/Banner';
 import HomeFurniture from '../components/Product/HomeFurniture';
 import HomeReview from '../components/Product/HomeReview';
+import Services from '../components/Services/Services';
 
 const Home = () => {
     
@@ -10,9 +10,7 @@ const Home = () => {
             <Banner></Banner>
             <HomeFurniture></HomeFurniture>
             <HomeReview></HomeReview>
-            <div className='link-btn'>
-            <Link to="/review">Show all comments</Link>
-            </div>
+            <Services></Services>
         </div>
     );
 };
