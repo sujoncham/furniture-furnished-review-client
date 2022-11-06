@@ -7,7 +7,7 @@ const AllUsers = () => {
     const navigate = useNavigate();
 
     useEffect(()=>{
-        fetch('http://localhost:5000/user')
+        fetch('https://furniture-furnished-server.onrender.com/user')
         .then(res =>res.json())
         .then(data => setUsers(data));
     }, []);

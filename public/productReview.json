@@ -1,42 +1,90 @@
 [
   {
-    "id": 1,
     "name": "Prithom Hasan",
     "para": "Great service, staff very helpful. Danny has great excellent customer service. Everything in Koala Living is great",
     "img": "./images/profile-1.jpg",
     "rating": "4 Star"
   },
   {
-    "id": 2,
     "name": "Mousomi Akter",
     "para": "Very satisfied with the product and delivery. Got within a short time. Good product in this price range. Lets see how its lasts",
     "img": "./images/profile-2.jpg",
     "rating": "4.5 Star"
   },
   {
-    "id": 3,
     "name": "Shruty Hasan",
     "para": "Fast delivery, same product. But just febric was low quality. Febric color wasn't enough brighter. Overall good. If you look on price.",
     "img": "./images/profile-3.jpg",
     "rating": "3.5 Star"
   },
   {
-    "id": 4,
     "name": "Nibedita Datta",
     "para": "very good product, seller communication very well &  delivery man helpful. Thanks & seller for given good product timely.",
     "img": "./images/profile-4.jpg",
     "rating": "4.5 Star"
   },
   {
-    "id": 5,
     "name": "Khairul Islam",
     "para": "Products It's good, better & Beautiful.truly i like it.Thanks for Furniture & thanks of Best one Furniture",
     "img": "./images/profile-5.jpg",
     "rating": "3.5 Star"
   },
   {
-    "id": 6,
     "name": "Nigar Sultana",
+    "para": "The product is really better in quality and similar as advertised. Get the delivery within the mentioned timeframe. Thanks to the seller and Furniture..",
+    "img": "./images/profile-6.jpg",
+    "rating": "4 Star"
+  },
+  {
+    "name": "Sourav Dar",
+    "para": "The product is really better in quality and similar as advertised. Get the delivery within the mentioned timeframe. Thanks to the seller and Furniture..",
+    "img": "./images/profile-6.jpg",
+    "rating": "4 Star"
+  },
+  {
+    "name": "Netendra Chandra",
+    "para": "The product is really better in quality and similar as advertised. Get the delivery within the mentioned timeframe. Thanks to the seller and Furniture..",
+    "img": "./images/profile-6.jpg",
+    "rating": "4 Star"
+  },
+  {
+    "name": "Akash Bepary",
+    "para": "The product is really better in quality and similar as advertised. Get the delivery within the mentioned timeframe. Thanks to the seller and Furniture..",
+    "img": "./images/profile-6.jpg",
+    "rating": "4 Star"
+  },
+  {
+    "name": "Suruj mia",
+    "para": "The product is really better in quality and similar as advertised. Get the delivery within the mentioned timeframe. Thanks to the seller and Furniture..",
+    "img": "./images/profile-6.jpg",
+    "rating": "4 Star"
+  },
+  {
+    "name": "Belel Khan",
+    "para": "The product is really better in quality and similar as advertised. Get the delivery within the mentioned timeframe. Thanks to the seller and Furniture..",
+    "img": "./images/profile-6.jpg",
+    "rating": "4 Star"
+  },
+  {
+    "name": "Jostina Nokrek",
+    "para": "The product is really better in quality and similar as advertised. Get the delivery within the mentioned timeframe. Thanks to the seller and Furniture..",
+    "img": "./images/profile-6.jpg",
+    "rating": "4 Star"
+  },
+  {
+    "name": "Fokir Alom",
+    "para": "The product is really better in quality and similar as advertised. Get the delivery within the mentioned timeframe. Thanks to the seller and Furniture..",
+    "img": "./images/profile-6.jpg",
+    "rating": "4 Star"
+  },
+  {
+    "name": "Nishita Khan",
+    "para": "The product is really better in quality and similar as advertised. Get the delivery within the mentioned timeframe. Thanks to the seller and Furniture..",
+    "img": "./images/profile-6.jpg",
+    "rating": "4 Star"
+  },
+  {
+    "name": "Armin Sultana",
     "para": "The product is really better in quality and similar as advertised. Get the delivery within the mentioned timeframe. Thanks to the seller and Furniture..",
     "img": "./images/profile-6.jpg",
     "rating": "4 Star"

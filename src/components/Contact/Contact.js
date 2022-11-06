@@ -1,6 +1,6 @@
 import React from 'react';
 import { Form } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import SocialIcons from '../SharedComponents/SocialIcons';
 
 const Contact = () => {
     return (
@@ -8,17 +8,17 @@ const Contact = () => {
             <div className='row'>
                 <div className="col-md-12">
                     <h1 className='text-center'>Contact With Us</h1>
-                    <p className='text-center'>you feedback, our business</p>
+                    <p className='text-center'>your feedback, our business</p>
                 </div>
                 <div className="col-md-6">
-                    <h4 className='text-warning'>Our Office</h4>
+                    <h4>Our Office</h4>
                     <address>
                     <span>Segun Lake, 125 Street, 452 House</span> <br />
                         <span>New York, USA</span> <br />
                         <span>Phone: +965622332</span> <br />
                         <span>Email: furniture@gmail.com</span> <br />
                     </address>
-                    <h4 className='text-warning'>Corporate Office</h4>
+                    <h4>Corporate Office</h4>
                     <address>
                         <span>Segun Lake, 125 Street, 452 House</span> <br />
                         <span>New York, USA</span> <br />
@@ -26,12 +26,7 @@ const Contact = () => {
                         <span>Email: furniture@gmail.com</span> <br />
                     </address>
                     <div>
-                        <div>
-                            <Link to="/" className='text-warning'> <i className='fa fa-twitter h4'></i> </Link>
-                            <Link to="/" className='text-warning'> <i className='fa fa-facebook text-dark h4'></i> </Link>
-                            <Link to="/" className='text-warning'> <i className='fa fa-linkedin h4'></i> </Link>
-                            <Link to="/" className='text-warning'> <i className='fa fa-google-plus text-dark h4'></i> </Link>
-                        </div>
+                        <SocialIcons />
                     </div>
                 </div>
                 <div className="col-md-6">

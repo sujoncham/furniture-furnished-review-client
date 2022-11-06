@@ -17,7 +17,7 @@ const ProductAdd = () => {
             img,
         };
 
-        fetch('https://sleepy-thicket-05560.herokuapp.com/furniture', {
+        fetch('https://furniture-furnished-server.onrender.com/furniture', {
             method: 'POST',
             headers:{
                 'content-type' : 'application/json',

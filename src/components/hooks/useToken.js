@@ -8,7 +8,7 @@ const useToken = user =>{
         const currentEmail = {email:email};
 
         if(email){
-            fetch(`http://localhost:5000/user/${email}`, {
+            fetch(`https://furniture-furnished-server.onrender.com/user/${email}`, {
             method:'PUT',
             headers:{
                 'content-type' : 'application/json',

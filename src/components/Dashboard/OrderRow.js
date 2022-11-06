@@ -8,7 +8,7 @@ const OrderRow = ({order, index, refetch}) => {
     const deleteOrder = (id) =>{
         const confirmDelete = window.confirm("Are you sure to delete this product!!!");
         if(confirmDelete){
-            fetch(`https://sleepy-thicket-05560.herokuapp.com/order/${id}`, {
+            fetch(`https://furniture-furnished-server.onrender.com/order/${id}`, {
                 method: 'DELETE',
                 headers:{
                     'content-type' : 'application/json',

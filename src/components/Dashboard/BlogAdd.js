@@ -22,7 +22,7 @@ const BlogAdd = () => {
             lastTime,
         };
 
-        fetch('http://localhost:5000/blog', {
+        fetch('https://furniture-furnished-server.onrender.com/blog', {
             method: 'POST',
             headers:{
                 'content-type' : 'application/json',

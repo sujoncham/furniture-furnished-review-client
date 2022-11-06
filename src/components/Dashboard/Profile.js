@@ -20,7 +20,7 @@ const Profile = () => {
 
         // post data
 
-        fetch(`http://localhost:5000/profile?profile=${profileId}`, {
+        fetch(`https://furniture-furnished-server.onrender.com/profile?profile=${profileId}`, {
             method: 'PUT',
             headers:{
                 'content-type' : 'applicaton/json',
@@ -34,9 +34,9 @@ const Profile = () => {
     }
 
     return (
-        <div className="container">
+        <div className="container mb-5">
         <div className="row">
-            <h1>My Profile : {profileId}</h1>
+            <h1 className='text-center mt-5 mb-5'>My Profile</h1>
            <div className="col-md-6 offset-md-3">
            <Form onSubmit={handleProfile}>
                 <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
@@ -59,7 +59,7 @@ const Profile = () => {
                     <Form.Label>Skills</Form.Label>
                     <Form.Control as="textarea" name='skills' placeholder='write skills here' rows={3} />
                 </Form.Group>
-                <Button as="input" type="submit" value="Submit" />
+                <Button as="input" type="submit" value="Update" />
             </Form>
            </div>
         </div>

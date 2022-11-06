@@ -5,7 +5,7 @@ const Blogs = () => {
 
     useEffect(()=>{
         const blogQuote = async () => {
-            const res = await fetch('http://localhost:5000/blog');
+            const res = await fetch('https://furniture-furnished-server.onrender.com/blog');
             const data = await res.json();
             setBlogs(data);
         }

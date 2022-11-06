@@ -11,7 +11,7 @@ const Furniture = () => {
 
 
         const furnitureData = async () =>{
-            const res = await fetch('https://sleepy-thicket-05560.herokuapp.com/furniture');
+            const res = await fetch('https://furniture-furnished-server.onrender.com/furniture');
             const data = await res.json();
             setFurnitures(data);
         }

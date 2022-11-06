@@ -5,7 +5,7 @@ const HomeDashboard = () => {
     const [furnitures, setFurnitures] = useState([]);
 
     useEffect( ()=>{
-        fetch('https://sleepy-thicket-05560.herokuapp.com/furniture')
+        fetch('https://furniture-furnished-server.onrender.com/furniture')
         .then(res => res.json())
         .then(data => setFurnitures(data));
     }, []);
